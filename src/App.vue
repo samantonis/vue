@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <component :is="theme">
+      <router-view />
+    </component>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    theme() {
+      return "theme-" + (this.$route.meta.theme || "default");
+    }
+  }
+};
+</script>
 
 <style>
 #app {
