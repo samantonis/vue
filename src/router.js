@@ -18,6 +18,10 @@ export default new Router({
       meta: { theme: "other" },
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
+    },
+    {
+      path: "*",
+      redirect: "/login"
     }
   ]
 });
