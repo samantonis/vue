@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <navigation />
-    <slot />
-  </div>
+  <v-layout row wrap>
+    <v-flex xs4>
+      <navigation />
+    </v-flex>
+    <v-flex xs8>
+      <slot />
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
