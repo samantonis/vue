@@ -1,9 +1,9 @@
 <template>
   <v-layout row wrap>
-    <v-flex xs4>
+    <v-flex>
       <navigation />
     </v-flex>
-    <v-flex xs8>
+    <v-flex xs12>
       <slot />
     </v-flex>
   </v-layout>
@@ -18,9 +18,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-#app {
-  background-color: aqua;
-}
-</style>

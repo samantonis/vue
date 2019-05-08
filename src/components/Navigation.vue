@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-btn color="black" dark @click.stop="drawer = !drawer">
-      show menu
+      <v-icon>dehaze</v-icon>
     </v-btn>
     <v-navigation-drawer
       v-model="drawer"
@@ -40,7 +40,9 @@
           </v-list-tile-action>
 
           <v-list-tile-content>
-            <v-list-tile-title> {{ item.title }}</v-list-tile-title>
+            <v-list-tile-title>
+              {{ $t("default." + item.title) }}
+            </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -59,12 +61,10 @@ export default {
       drawer: null,
       mini: true,
       items: [
-        { title: "Home", icon: "dashboard", url: "/" },
-        { title: "About", icon: "question_answer", url: "/about" }
+        { title: "home", icon: "dashboard", url: "/" },
+        { title: "about", icon: "question_answer", url: "/about" }
       ]
     };
   }
 };
 </script>
-
-<style scoped></style>

@@ -4,9 +4,3 @@
     <slot />
   </div>
 </template>
-
-<style scoped>
-#app {
-  background-color: red;
-}
-</style>
