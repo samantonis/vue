@@ -9,13 +9,14 @@ import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
 import * as EN from "@/translations/EN";
 import * as NL from "@/translations/NL";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 Vue.config.productionTip = false;
 
 Vue.component("theme-default", Default);
 Vue.component("theme-other", Other);
 
-Vue.use(Vuetify);
+Vue.use(Vuetify, { iconfont: "fa" });
 Vue.use(vuexI18n.plugin, store);
 
 // add translations directly to the application
